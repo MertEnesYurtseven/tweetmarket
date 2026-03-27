@@ -20,7 +20,6 @@ It detects statistically significant volume anomalies (Z-scores vs. Time-of-Day 
 - **Time-of-Day Baselines**: Filters out natural market rhythms using 20-day historical averages.
 - **Interactive Microstructure Visualizer**: Desktop GUI (PyQt5 + pyqtgraph) with synchronized candlestick + volume charts centered on each event.
 - **Data Pipeline**: Scripts to fetch fresh Binance 1m klines and load/process Databento CME futures data.
-- **Reproducible Output**: Generates `insider_analysis_report.txt` with per-event, per-asset statistics.
 
 ## Project Structure
 
@@ -34,7 +33,6 @@ tweetmarket/
 ├── loaddata.py                       # Data loader + profiler (Binance + Databento)
 ├── trumpfetchcrypto.py               # Binance 1m klines fetcher for March 2026
 ├── linktofutures.txt                 # Reference for Databento CME futures dataset
-└── insider_analysis_report.txt       # Generated analysis output
 ```
 
 ## Installation
@@ -81,7 +79,7 @@ Prints shape, data types, missing values, and statistical summary for all datase
 python analyzetrump.py
 ```
 - Analyzes every event in `TWEET_EVENTS`.
-- Outputs detailed statistics to `insider_analysis_report.txt`.
+- Outputs detailed statistics
 - Matches exactly the anomalies discussed in the Medium article (March 23 polarity whipsaw, March 19 safe-haven distribution, March 8 oil leak, etc.).
 
 ### 4. Launch Interactive Visualizer
